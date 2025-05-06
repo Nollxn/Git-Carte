@@ -1,0 +1,166 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#map {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+#largeChatBox {
+    display: none;
+    position: absolute;
+    z-index: 1050;
+    width: 400px;
+    height: 600px;
+    background-color: white;
+    left: 6em;
+    bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.toggleSidebar {
+    position: absolute !important;
+    top: 10px !important;
+    right: 10px !important;
+    z-index: 1001 !important;
+    font-size: 25px !important;
+    border-radius: 100% !important;
+    color: black !important;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2) !important;
+
+}
+
+/* From Uiverse.io by talhabangyal (adapted) */
+.hamburger {
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1051;
+    border-radius: 5px;
+}
+
+
+.hamburger button {
+    all: unset;
+    /* Reset button styles */
+    position: absolute;
+    inset: 0;
+}
+
+.hamburger svg {
+    /* The size of the SVG defines the overall size */
+    height: 3em;
+    /* Define the transition for transforming the SVG */
+    transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line {
+    fill: none;
+    stroke: black;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 3;
+    /* Define the transition for transforming the Stroke */
+    transition:
+        stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+        stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line-top-bottom {
+    stroke-dasharray: 12 63;
+}
+
+.hamburger.active svg {
+    transform: rotate(-45deg);
+}
+
+.hamburger.active .line-top-bottom {
+    stroke-dasharray: 20 300;
+    stroke-dashoffset: -32.42;
+}
+
+.github-btn {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    height: 50px;
+    width: 50px;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    z-index: 1051;
+    font-size: 1.5em !important;
+}
+
+#lyceeModal .modal-dialog {
+    max-width: 600px;
+    /* Taille fixe */
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#lyceeModal .modal-content {
+    width: 100%;
+}
+
+.info-item {
+    margin-bottom: 15px;
+    padding: 10px;
+    background: #f8f9fa;
+    border-radius: 5px;
+}
+
+.info-item i {
+    width: 25px;
+    color: #0d6efd;
+}
+
+.btn-onisep {
+    margin: 10px 0;
+    width: 100%;
+}
+
+
+#btnsbl {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#btnsbl button,
+#btnsbl a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.5em;
+    height: 3.5em;
+    background-color: white;
+    border: none;
+    color: black;
+    padding: 10px;
+    border-radius: 2em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+#btnsbl button:hover,
+#btnsbl a:hover {
+    transform: scale(1.1);
+}
+
+#btnsbl button i,
+#btnsbl a i {
+    font-size: 1.5rem;
+}
